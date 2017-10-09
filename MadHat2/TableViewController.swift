@@ -8,10 +8,10 @@
 
 import UIKit
 
-var videoList = ["http://thepk.co:2095/live/a3rts2l1/ableenpbiliylnann1/262.m3u8",
-                 "http://thepk.co:2095/live/a3rts2l1/ableenpbiliylnann1/267.m3u8",
-                 "http://62.210.248.96:11000/live/kitten_paid/kkZpEn7fAy/8009.m3u8",
-                 "http://62.210.248.96:11000/live/kitten_paid/kkZpEn7fAy/7994.m3u8"]
+var videoList = ["http://thepk.co:2086/live/a3rts2l1/ableenpbiliylnann1/317.m3u8",
+                 "http://thepk.co:2086/live/a3rts2l1/ableenpbiliylnann1/260.m3u8",
+                 "http://thepk.co:2086/live/a3rts2l1/ableenpbiliylnann1/349.m3u8",
+                 "http://thepk.co:2086/live/a3rts2l1/ableenpbiliylnann1/308.m3u8"]
 
 var videoDesc = ["HBO", "CNN", "CNBC", "NFL"]
 var myIndex = 0
