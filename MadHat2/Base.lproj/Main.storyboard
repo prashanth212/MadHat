@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="j2B-db-Stz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MNa-gT-dtG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,25 +30,68 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sA3-8O-XT4" id="Qt2-RS-q5j">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ujz-hq-6WE" kind="show" identifier="videoView" id="73q-pz-5OT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="j2B-db-Stz" id="h5f-bc-kKS"/>
-                            <outlet property="delegate" destination="j2B-db-Stz" id="Uk8-3T-idl"/>
-                        </connections>
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfd-Rc-eQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-740" y="139"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="LMe-im-z5p">
+            <objects>
+                <viewController id="Ujz-hq-6WE" customClass="ViewController" customModule="MadHat2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kuY-vI-8ak"/>
+                        <viewControllerLayoutGuide type="bottom" id="jmn-pf-cYh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8lX-ah-rkw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ic-ad-dba">
+                                <rect key="frame" x="0.0" y="228" width="375" height="211"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8Ic-ad-dba" secondAttribute="height" multiplier="16:9" id="pw0-HA-HeS"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGS-Il-NUX">
+                                <rect key="frame" x="16" y="28" width="53" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; back"/>
+                                <connections>
+                                    <segue destination="j2B-db-Stz" kind="show" id="tT7-KI-f7F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Ic-ad-dba" secondAttribute="trailing" id="D0Q-ta-KDG"/>
+                            <constraint firstItem="8Ic-ad-dba" firstAttribute="centerY" secondItem="8lX-ah-rkw" secondAttribute="centerY" id="aey-Sh-CY9"/>
+                            <constraint firstItem="8Ic-ad-dba" firstAttribute="leading" secondItem="8lX-ah-rkw" secondAttribute="leading" id="hkd-gU-B7k"/>
+                            <constraint firstItem="8Ic-ad-dba" firstAttribute="centerX" secondItem="8lX-ah-rkw" secondAttribute="centerX" id="inC-dW-LLJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="8Ic-ad-dba" id="wnD-WA-MqE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0J-Hc-gzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="138.98050974512745"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="zEg-6T-k5I">
             <objects>
-                <viewController id="MNa-gT-dtG" userLabel="Login View Controller" sceneMemberID="viewController">
+                <viewController id="MNa-gT-dtG" userLabel="Login View Controller" customClass="LoginViewController" customModule="MadHat2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cmn-Cz-xBq"/>
                         <viewControllerLayoutGuide type="bottom" id="d3S-Uo-cew"/>
@@ -86,6 +130,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fh-H5-ggK" userLabel="LoginBtn">
                                         <rect key="frame" x="27.5" y="133" width="38" height="30"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <segue destination="j2B-db-Stz" kind="show" identifier="tableView" id="5q2-rg-7qu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -99,7 +146,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jB-Bq-wsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-1633" y="139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tT7-KI-f7F"/>
+    </inferredMetricsTieBreakers>
 </document>

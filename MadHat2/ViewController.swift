@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, VLCMediaPlayerDelegate {
     
-    var movieView: UIView!
+    @IBOutlet weak var videoView: UIView!
+    
     var mediaPlayer = VLCMediaPlayer()
     
     override func viewDidLoad() {
@@ -19,17 +20,12 @@ class ViewController: UIViewController, VLCMediaPlayerDelegate {
         //Add rotation observer
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
-        //Setup movieView
-        self.movieView = UIView()
-        self.movieView.backgroundColor = UIColor.gray
-        self.movieView.frame = UIScreen.screens[0].bounds
-        
         //Add tap gesture to movieView for play/pause
         let gesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.movieViewTapped(_:)))
-        self.movieView.addGestureRecognizer(gesture)
+        self.videoView.addGestureRecognizer(gesture)
         
         //Add movieView to view controller
-        self.view.addSubview(self.movieView)
+        self.view.addSubview(self.videoView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,7 +38,7 @@ class ViewController: UIViewController, VLCMediaPlayerDelegate {
         
         
         mediaPlayer.delegate = self
-        mediaPlayer.drawable = self.movieView
+        mediaPlayer.drawable = self.videoView
         
     }
     
@@ -62,7 +58,7 @@ class ViewController: UIViewController, VLCMediaPlayerDelegate {
         }
         
         //Always fill entire screen
-        self.movieView.frame = self.view.frame
+        self.videoView.frame = self.view.frame
         
     }
     
@@ -74,7 +70,7 @@ class ViewController: UIViewController, VLCMediaPlayerDelegate {
             let remaining = mediaPlayer.remainingTime
             let time = mediaPlayer.time
             
-            print("Paused at \(time) with \(remaining) time remaining")
+            print("Paused at \(String(describing: time)) with \(String(describing: remaining)) time remaining")
         }
         else {
             mediaPlayer.play()
