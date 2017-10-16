@@ -131,7 +131,7 @@
                                         <rect key="frame" x="27.5" y="133" width="38" height="30"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
-                                            <segue destination="j2B-db-Stz" kind="show" identifier="tableView" id="5q2-rg-7qu"/>
+                                            <action selector="UserLogin:" destination="MNa-gT-dtG" eventType="touchUpInside" id="RGo-RL-ezZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
