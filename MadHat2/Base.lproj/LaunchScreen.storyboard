@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,20 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Full_MadHat_Logo_Transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="icz-6N-t7U">
-                                <rect key="frame" x="87" y="220" width="200" height="247"/>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Full_MadHat_Logo_Transparent" highlightedImage="Full_MadHat_Logo_Transparent" translatesAutoresizingMaskIntoConstraints="NO" id="vbZ-Iu-k6l">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="ukM-3V-ccP"/>
-                                    <constraint firstAttribute="height" constant="200" id="yth-OY-KCv"/>
+                                    <constraint firstAttribute="width" constant="200" id="WI8-xh-x0B"/>
+                                    <constraint firstAttribute="height" constant="200" id="plh-Et-LZJ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.9994240403175354" green="0.47779271079679331" blue="0.23969812480032479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.47779271080000002" blue="0.2396981248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="icz-6N-t7U" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hte-l4-YAi"/>
-                            <constraint firstItem="icz-6N-t7U" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="200" id="Imc-fw-Ucg"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="icz-6N-t7U" secondAttribute="bottom" constant="200" id="PJX-WP-arB"/>
-                            <constraint firstItem="icz-6N-t7U" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="bXi-cU-IHD"/>
+                            <constraint firstItem="vbZ-Iu-k6l" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="19c-3d-OJP"/>
+                            <constraint firstItem="vbZ-Iu-k6l" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="R2f-xI-5EV"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Full_MadHat_Logo_Transparent.png" width="432" height="491"/>
+        <image name="Full_MadHat_Logo_Transparent" width="144" height="163"/>
     </resources>
 </document>
