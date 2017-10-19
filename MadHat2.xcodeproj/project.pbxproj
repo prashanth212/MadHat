@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4843F6E81F7D471C00AB0960 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4843F6E71F7D471C00AB0960 /* TableViewController.swift */; };
+		4852B2C51F98006D0061F324 /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852B2C41F98006D0061F324 /* CustomCollectionViewController.swift */; };
+		4852B2C71F98009E0061F324 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852B2C61F98009E0061F324 /* CustomCollectionViewCell.swift */; };
+		4852B2C91F9801020061F324 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852B2C81F9801020061F324 /* CustomCollectionViewLayout.swift */; };
 		48B4C4581F8C05FF008C7B15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4C4571F8C05FF008C7B15 /* LoginViewController.swift */; };
 		48D85C391F434A390026C842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D85C381F434A390026C842 /* AppDelegate.swift */; };
 		48D85C3B1F434A390026C842 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D85C3A1F434A390026C842 /* ViewController.swift */; };
@@ -54,6 +57,9 @@
 		1F2AC33F7F342FB429E1E3D8 /* Pods-MadHat2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadHat2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MadHat2UITests/Pods-MadHat2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4502A14A3A9501F4D4862238 /* Pods-MadHat2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadHat2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MadHat2/Pods-MadHat2.debug.xcconfig"; sourceTree = "<group>"; };
 		4843F6E71F7D471C00AB0960 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4852B2C41F98006D0061F324 /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
+		4852B2C61F98009E0061F324 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		4852B2C81F9801020061F324 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
 		48B4C4571F8C05FF008C7B15 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		48D85C351F434A390026C842 /* MadHat2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadHat2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D85C381F434A390026C842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +163,9 @@
 				48D85C3A1F434A390026C842 /* ViewController.swift */,
 				4843F6E71F7D471C00AB0960 /* TableViewController.swift */,
 				48D85C3C1F434A390026C842 /* Main.storyboard */,
+				4852B2C81F9801020061F324 /* CustomCollectionViewLayout.swift */,
+				4852B2C61F98009E0061F324 /* CustomCollectionViewCell.swift */,
+				4852B2C41F98006D0061F324 /* CustomCollectionViewController.swift */,
 				48B4C4571F8C05FF008C7B15 /* LoginViewController.swift */,
 				48D85C3F1F434A390026C842 /* Assets.xcassets */,
 				48D85C411F434A390026C842 /* LaunchScreen.storyboard */,
@@ -496,10 +505,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D85C3B1F434A390026C842 /* ViewController.swift in Sources */,
+				4852B2C71F98009E0061F324 /* CustomCollectionViewCell.swift in Sources */,
 				48D85C391F434A390026C842 /* AppDelegate.swift in Sources */,
 				48D85C691F434A610026C842 /* empty.cpp in Sources */,
 				48B4C4581F8C05FF008C7B15 /* LoginViewController.swift in Sources */,
 				4843F6E81F7D471C00AB0960 /* TableViewController.swift in Sources */,
+				4852B2C91F9801020061F324 /* CustomCollectionViewLayout.swift in Sources */,
+				4852B2C51F98006D0061F324 /* CustomCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

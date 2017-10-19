@@ -29,9 +29,6 @@ class LoginViewController: UIViewController {
         UserPassword.layer.borderColor = UIColor.black.cgColor
         UserPassword.layer.cornerRadius = 20
         UserPassword.clipsToBounds = true
-        
-        LoginButton.layer.cornerRadius = 20
-        LoginButton.clipsToBounds = true
     
     }
     

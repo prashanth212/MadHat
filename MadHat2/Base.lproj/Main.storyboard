@@ -126,7 +126,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="j2B-db-Stz" kind="show" identifier="guideView" id="ZPw-y5-QNb"/>
+                                            <segue destination="atl-Ny-asU" kind="show" id="Ifi-bs-S7b"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gan-ho-hUt">
@@ -169,20 +169,66 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="LoginButton" destination="vr5-tE-b1Y" id="g2B-e3-oHf"/>
                         <outlet property="UserName" destination="gan-ho-hUt" id="wiX-Ff-agf"/>
                         <outlet property="UserPassword" destination="T0i-RX-vlB" id="lrt-ob-Ofz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jB-Bq-wsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1634.4000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-2535" y="139"/>
+        </scene>
+        <!--Custom Collection View Controller-->
+        <scene sceneID="39y-rF-wA5">
+            <objects>
+                <collectionViewController id="atl-Ny-asU" customClass="CustomCollectionViewController" customModule="MadHat2" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" dataMode="prototypes" id="yio-M2-0T5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                        <collectionViewLayout key="collectionViewLayout" id="oBp-av-55Y" customClass="CustomCollectionViewLayout" customModule="MadHat2" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCell" id="EXp-t9-srg" customClass="CustomCollectionViewCell" customModule="MadHat2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="126" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="126" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sec 0 / Item 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Iz-Qk-U3w">
+                                            <rect key="frame" x="24.5" y="18" width="77" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7Iz-Qk-U3w" firstAttribute="centerY" secondItem="EXp-t9-srg" secondAttribute="centerY" constant="0.5" id="bIP-ln-oyo"/>
+                                    <constraint firstItem="7Iz-Qk-U3w" firstAttribute="centerX" secondItem="EXp-t9-srg" secondAttribute="centerX" id="m96-4m-BcI"/>
+                                </constraints>
+                                <size key="customSize" width="126" height="50"/>
+                                <connections>
+                                    <outlet property="label" destination="7Iz-Qk-U3w" id="Uug-sZ-6CG"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="atl-Ny-asU" id="vcg-Fb-NMY"/>
+                            <outlet property="delegate" destination="atl-Ny-asU" id="XfX-tD-Vxf"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WN0-z7-lo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1647.2" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>
         <image name="MadHat-Login" width="432" height="409"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZPw-y5-QNb"/>
+        <segue reference="tT7-KI-f7F"/>
     </inferredMetricsTieBreakers>
 </document>
