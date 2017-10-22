@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 private let reuseIdentifier = "customCell"
 
@@ -21,7 +22,7 @@ class Airings{
 }
 
 class Scheduler{
-    let name: String = ""
+    let callSign: String = ""
     let logoUrl: String = ""
     let airings: [Airings] = []
     
@@ -42,7 +43,7 @@ class CustomCollectionViewController: UICollectionViewController {
         Alamofire.request(url).responseJSON { response in
             
             guard let data = response.result.value else {return}
-            self.schedulers = data as! [AnyObject]
+            self.schedulers = data as! [Scheduler]
         
             self.myCollectionView.reloadData()
           //print("GN-Data::`\(self.schedulers )")
@@ -68,11 +69,37 @@ class CustomCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CustomCollectionViewCell
-//        let labelText = schedulers[indexPath.row] as AnyObject //"Sec " + indexPath.section.description + "/Item " + indexPath.item.description
+       //let labelText = "Sec " + indexPath.section.description + "/Item " + indexPath.item.description
 //
 //        cell.label?.text = (labelText as! String)
         
-        print("LabelText:::\(schedulers)")
+       
+       
+        
+        if(schedulers.count > 0){
+            if indexPath.row == 0 {
+                cell.label?.text = schedulers[indexPath.section]["callSign"] as? String
+            }
+            if indexPath.row == 1 {
+                //cell.label?.text = JSON(schedulers[indexPath.item]["airings"])[0].shortDescription as? String
+            }
+            
+            
+            
+            
+           // print("airings:::\(schedulers[indexPath.row]["airings"])")
+             print("indexPath:::\(indexPath)")
+           // print("section)::\(indexPath.section)")
+            //print("section-description)::\(indexPath.section.description)")
+            //cell.label?.text = labelText
+            //cell.label?.text = schedulers[indexPath.section]["callSign"] as? String
+            
+            //schedulers[indexPath.row]["callSign"] as? String
+           
+        }
+        
+        
+        
         
         // Configure the cell
         
