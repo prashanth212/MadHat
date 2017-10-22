@@ -219,6 +219,9 @@
                             <outlet property="delegate" destination="atl-Ny-asU" id="XfX-tD-Vxf"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="myCollectionView" destination="yio-M2-0T5" id="s9R-KI-ddF"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WN0-z7-lo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,6 +232,6 @@
         <image name="MadHat-Login" width="432" height="409"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tT7-KI-f7F"/>
+        <segue reference="73q-pz-5OT"/>
     </inferredMetricsTieBreakers>
 </document>

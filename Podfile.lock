@@ -1,12 +1,18 @@
 PODS:
+  - Alamofire (4.5.0)
   - MobileVLCKit (2.2.2)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - Alamofire
   - MobileVLCKit
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   MobileVLCKit: 75c2c36b0e3478c3f18cac3a2e7fa127cda0ff92
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 733ae8d22b41914ff5c9fcd57343a403d706574f
+PODFILE CHECKSUM: e2d4249906b8502056c9a8c67d6d7290776b8e09
 
 COCOAPODS: 1.2.1

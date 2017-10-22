@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'MadHat2' do
   pod 'MobileVLCKit'
+  pod 'Alamofire'
 end
 
 target 'MadHat2Tests' do
