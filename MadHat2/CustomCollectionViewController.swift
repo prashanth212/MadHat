@@ -29,16 +29,44 @@ class Scheduler{
 
 }
 
+extension Formatter {
+    static let iso8601: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:ssZ"
+        return formatter
+    }()
+}
+extension Date {
+    var iso8601: String {
+        return Formatter.iso8601.string(from: self)
+    }
+}
+
+extension String {
+    var dateFromISO8601: Date? {
+        return Formatter.iso8601.date(from: self)   // "Mar 22, 2017, 10:22 AM"
+    }
+}
+
 class CustomCollectionViewController: UICollectionViewController {
     
     @IBOutlet var myCollectionView: UICollectionView!
     
     var schedulers = [AnyObject]()
     
+    
     override func viewDidAppear(_ animated: Bool) {
         //let scheduler: Scheduler
+        let currentDateTime = Date().iso8601;
+         print("date:\(currentDateTime)")
         
-        let url = "https://data.tmsapi.com/v1.1/lineups/USA-NH28457-X/grid?stationId=10035%2C10021%2C16331%2C18332%2C14755%2C10057%2C10139%2C10142%2C10149%2C18544%2C11150%2C10179%2C12444%2C16374%2C12574%2C82541%2C14321%2C66268%2C10240%2C14771%2C10269%2C10918%2C62081%2C16300%2C32281%2C45399%2C24959%2C11006%2C11069%2C11115%2C11163%2C11097%2C11867%2C11164%2C12131%2C11207%2C11369%2C11325%2C11187%2C11456%2C11418%2C101663%2C11659&startDateTime=2017-10-20T20%3A00Z&api_key=t2fpebq8ptvgxaq5nh4x597n"
+        
+        let url = "https://data.tmsapi.com/v1.1/lineups/USA-NH28457-X/grid?stationId=10035%2C10021%2C16331%2C18332%2C14755%2C10057%2C10139%2C10142%2C10149%2C18544%2C11150%2C10179%2C12444%2C16374%2C12574%2C82541%2C14321%2C66268%2C10240%2C14771%2C10269%2C10918%2C62081%2C16300%2C32281%2C45399%2C24959%2C11006%2C11069%2C11115%2C11163%2C11097%2C11867%2C11164%2C12131%2C11207%2C11369%2C11325%2C11187%2C11456%2C11418%2C101663%2C11659&startDateTime=\(currentDateTime)&api_key=t2fpebq8ptvgxaq5nh4x597n"
+        
+        print("URL:\(url)")
         
         Alamofire.request(url).responseJSON { response in
             
@@ -46,7 +74,7 @@ class CustomCollectionViewController: UICollectionViewController {
             self.schedulers = data as! [Scheduler]
         
             self.myCollectionView.reloadData()
-          //print("GN-Data::`\(self.schedulers )")
+          print("GN-Data::`\(self.schedulers )")
             //print("JsonData:\(self.schedulers)")
             
         }
@@ -87,8 +115,9 @@ class CustomCollectionViewController: UICollectionViewController {
                     if indexPath.row == index {
                         let airingsArray = schedulers[indexPath.section]["airings"]
                         for anItem in airingsArray as! [AnyObject] {
+                            print("item:::\(anItem)")
                             let item = anItem["program"] as? NSDictionary
-                            cell.label?.text = (String(describing: item!["shortDescription"] as? String))
+                            cell.label?.text = (String(describing: item!["title"] as? String))
                         }
                         //cell.label?.text = JSON(schedulers[indexPath.item]["airings"])[0].shortDescription as? String
                     }
