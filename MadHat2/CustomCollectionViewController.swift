@@ -80,7 +80,14 @@ class CustomCollectionViewController: UICollectionViewController {
             if indexPath.row == 0 {
                 cell.label?.text = schedulers[indexPath.section]["callSign"] as? String
             }
+            
+//            print("airings:::\(airingsArray)")
             if indexPath.row == 1 {
+                let airingsArray = schedulers[indexPath.section]["airings"]
+                for anItem in airingsArray as! [AnyObject] {
+                    let item = anItem["program"] as? NSDictionary
+                    cell.label?.text = (String(describing: item!["shortDescription"] as? String))
+                }
                 //cell.label?.text = JSON(schedulers[indexPath.item]["airings"])[0].shortDescription as? String
             }
             
@@ -88,7 +95,7 @@ class CustomCollectionViewController: UICollectionViewController {
             
             
            // print("airings:::\(schedulers[indexPath.row]["airings"])")
-             print("indexPath:::\(indexPath)")
+             //print("indexPath:::\(indexPath)")
            // print("section)::\(indexPath.section)")
             //print("section-description)::\(indexPath.section.description)")
             //cell.label?.text = labelText
