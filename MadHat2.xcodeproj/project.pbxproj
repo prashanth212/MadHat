@@ -293,9 +293,9 @@
 				TargetAttributes = {
 					48D85C341F434A390026C842 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = V6XE5WXY2U;
+						DevelopmentTeam = 6265TAR63Y;
 						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					48D85C481F434A390026C842 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -681,7 +681,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = V6XE5WXY2U;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6265TAR63Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -691,6 +692,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prashanth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "320fcbeb-3fc6-4a37-a774-62140d26a65f";
+				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
 				SWIFT_OBJC_BRIDGING_HEADER = "MadHat2/MadHat2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -705,7 +708,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = V6XE5WXY2U;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -715,6 +719,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prashanth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MadHat2/MadHat2-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

@@ -43,7 +43,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfd-Rc-eQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-740" y="139"/>
+            <point key="canvasLocation" x="-400.80000000000001" y="138.98050974512745"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LMe-im-z5p">
@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0J-Hc-gzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.59999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="440.80000000000001" y="138.98050974512745"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="zEg-6T-k5I">
@@ -126,7 +126,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="atl-Ny-asU" kind="show" id="Ifi-bs-S7b"/>
+                                            <segue destination="vkt-lu-tGN" kind="show" id="Ifi-bs-S7b"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gan-ho-hUt">
@@ -181,8 +181,8 @@
         <scene sceneID="39y-rF-wA5">
             <objects>
                 <collectionViewController id="atl-Ny-asU" customClass="CustomCollectionViewController" customModule="MadHat2" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" dataMode="prototypes" id="yio-M2-0T5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" directionalLockEnabled="YES" dataMode="prototypes" id="yio-M2-0T5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
@@ -195,7 +195,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="126" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sec 0 / Item 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Iz-Qk-U3w">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sec 0 / Item 1" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Iz-Qk-U3w">
                                             <rect key="frame" x="24.5" y="18" width="77" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -219,13 +219,32 @@
                             <outlet property="delegate" destination="atl-Ny-asU" id="XfX-tD-Vxf"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="dxw-Vn-sq2"/>
                     <connections>
                         <outlet property="myCollectionView" destination="yio-M2-0T5" id="s9R-KI-ddF"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WN0-z7-lo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1647.2" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-1025" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i8l-wy-KOR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vkt-lu-tGN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Hai-1O-JYF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="atl-Ny-asU" kind="relationship" relationship="rootViewController" id="KDX-zP-DNa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eD0-0i-gvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1756" y="139"/>
         </scene>
     </scenes>
     <resources>

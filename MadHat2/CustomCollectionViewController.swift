@@ -74,7 +74,6 @@ class CustomCollectionViewController: UICollectionViewController {
             self.schedulers = data as! [Scheduler]
         
             self.myCollectionView.reloadData()
-          print("GN-Data::`\(self.schedulers )")
             //print("JsonData:\(self.schedulers)")
             
         }
@@ -86,62 +85,56 @@ class CustomCollectionViewController: UICollectionViewController {
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
-        return 40
+        return self.schedulers.count + 1
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
+        if section > 0, let airings = schedulers[section-1]["airings"] as? [[String: AnyObject]]  {
+            return airings.count
+        }
         return 20
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CustomCollectionViewCell
-       //let labelText = "Sec " + indexPath.section.description + "/Item " + indexPath.item.description
-//
-//        cell.label?.text = (labelText as! String)
+
+        if indexPath.section % 2 != 0 {
+            cell.backgroundColor = UIColor(white: 242/255.0, alpha: 1.0)
+        } else {
+            cell.backgroundColor = UIColor.white
+        }
         
-       
-       
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                cell.label.text = "Channel/Time"
+            } else {
+                cell.label.text = "Time"
+            }
+        }
         
         if(schedulers.count > 0){
             if indexPath.row == 0 {
-                cell.label?.text = schedulers[indexPath.section]["callSign"] as? String
-            }
-            else{
-            
-//            print("airings:::\(airingsArray)")
-                for index in 1...39{
-                    if indexPath.row == index {
-                        let airingsArray = schedulers[indexPath.section]["airings"]
-                        for anItem in airingsArray as! [AnyObject] {
-                            print("item:::\(anItem)")
-                            let item = anItem["program"] as? NSDictionary
-                            cell.label?.text = (String(describing: item!["title"] as? String))
-                        }
-                        //cell.label?.text = JSON(schedulers[indexPath.item]["airings"])[0].shortDescription as? String
+                if indexPath.section != 0 {
+                    cell.label?.text = schedulers[indexPath.section - 1]["callSign"] as? String
+                }
+            } else if indexPath.section != 0 {
+                if let scheduler = schedulers[indexPath.section-1] as? [String: AnyObject], let airingsArray = scheduler["airings"] as? [[String: AnyObject]] {
+                    if airingsArray.count > indexPath.row {
+                        let anItem = airingsArray[indexPath.row-1]
+                        debugPrint("item:::\(anItem)")
+                        let item = anItem["program"] as? NSDictionary
+                        cell.label?.text = (String(describing: item!["title"] as! String))
+                    } else {
+                        cell.label?.text = ""
                     }
+                } else {
+                    cell.label?.text = ""
                 }
             }
-            
-            
-            
-           // print("airings:::\(schedulers[indexPath.row]["airings"])")
-             //print("indexPath:::\(indexPath)")
-           // print("section)::\(indexPath.section)")
-            //print("section-description)::\(indexPath.section.description)")
-            //cell.label?.text = labelText
-            //cell.label?.text = schedulers[indexPath.section]["callSign"] as? String
-            
-            //schedulers[indexPath.row]["callSign"] as? String
-           
         }
-        
-        
-        
-        
-        // Configure the cell
-        
+    
         return cell
     }
 
